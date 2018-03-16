@@ -1,9 +1,10 @@
 /*-------------------------------------------
-              Default colors
+        Default colors
  ------------------------------------------*/
 $main_color: #7f64b5
 $grey_color: #444
 $font_active: #e15d5d
+$default_black: #484848
 
 $default_font: 'Montserrat', sans-serif
 /*-------------------------------------------
@@ -15,6 +16,21 @@ html, body
   height: 100%
   min-height: 100%
   font-family: sans-serif
+  transition: all .1s ease-in
+  color: #7b7b7b
+
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+  border: 0
+
+a
+  text-decoration: none
+  color: $default_black
+  transition: all .2s ease-in
+  &:hover
+    color: $font_active
 
 /*-------------------------------------------
 			  Navigation
@@ -66,7 +82,6 @@ html, body
 /*-------------------------------------------
 			  Header
  ------------------------------------------*/
-
 .header
   width: 100%
   &__nav
@@ -109,14 +124,97 @@ html, body
   &__right
     @extend .slider__left
 
+/*-------------------------------------------
+			  Content
+ ------------------------------------------*/
+.content
+  &__section
+    @extend .nav__section
+    justify-content: space-around
+    align-items: flex-start
+    margin-top: 50px
+    margin-bottom: 30px
+  &__item
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.125)
+    overflow: hidden
+    width: 100%
+    max-width: 360px
+    margin-bottom: 30px
+
+.post
+  &__img
+    width: 100%
+    &_wrap
+      display: block
+      position: relative
+    &_mask
+      width: 600px
+      height: 303px
+      background: rgba(255, 255, 255, .1)
+      display: inline-block
+      position: absolute
+      right: 350px
+      top: 0
+      transform: skew(-45deg)
+      transition: all .6s ease-in-out
+  &__author
+    display: flex
+    align-items: center
+    margin-bottom: 35px
+    padding: 0 25px
+  &__body
+    position: relative
+    padding-top: 10px
+    margin-bottom: 10px
+    margin-top: - 55px
+    background: rgba(255, 255, 255, .4)
+  &__title
+    color: $default_black
+    font-size: 14px
+    text-transform: uppercase
+    line-height: 1.4em
+    font-weight: 700
+    padding: 0 25px
+  &__entry
+    margin-top: 20px
+    line-height: 1.8em
+    letter-spacing: 0.02em
+    padding: 0 25px
+  &__footer
+    padding: 20px
+    font-size: 18px
+    background: #F7F8F9
+    padding-top: 0
+
+.author
+  &__img
+    width: 32px
+    height: 32px
+    overflow: hidden
+    border-radius: 50%
+    margin-right: 5px
+  &__name
+    font-family: $default_font
+    font-size: 14px
+    color: $default_black
+
+.footer
+  background-color: #fff
+  padding-top: 20px
+  box-shadow: 1px -2px 3px 0px rgba(0, 0, 0, 0.05)
+  color: #aaa
 
 .black
   background: black
+
 .red
   background: red
+
 .green
   background: green
+
 .blue
   background: blue
+
 .grey
   background: grey
