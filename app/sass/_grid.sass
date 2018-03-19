@@ -1,0 +1,17 @@
+$con_number : 12
+$space: 30px
+
+=col-sm($columns)
+   @media only screen and (min-width: 576px)
+    margin: 0 15px
+    width: calc(#{100% / $con_number * $columns} - #{$space})
+
+=col-md($columns)
+  @media only screen and (min-width: 768px)
+    margin: 0 15px
+    width: calc(#{100% / $con_number * $columns} - #{$space})
+
+=col-lg($columns)
+  @media only screen and (min-width: 992px)
+    margin: 0 15px
+    width: calc(#{100% / $con_number * $columns} - #{$space})
