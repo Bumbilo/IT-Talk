@@ -24,6 +24,22 @@ $(document).ready(function () {
             slider.find('.slider__box_content').css('margin-left', startMargin + 'px');
         });
     }
-    Slider(3)
+
+    Slider(3);
+    var postItem = $('.content__item');
+    var postImg = postItem.find('.post__img_wrap');
+
+    postItem.hover(function () {
+        $(this).find('.post__category').css('top', '10px');
+        $(this).find('.post__meta').css('right', '10px');
+    }, function () {
+        $(this).find('.post__category').css('top', '-25px');
+        $(this).find('.post__meta').css('right', '-60px');
+    });
+    postImg.hover(function () {
+        $(this).find('.post__img_mask').css('right', '-600px');
+    }, function () {
+        $(this).find('.post__img_mask').css('right', '300px');
+    });
 
 });
