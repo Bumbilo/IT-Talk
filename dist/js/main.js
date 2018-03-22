@@ -3,8 +3,12 @@ $(document).ready(function () {
     var allImages = slider.find('.slider__item');
     var sliderWidth = slider.width();
     var startMargin = 0;
+    $(window).resize(function () {
+        sliderWidth = slider.width();
+        Slider(sliderWidth, 3);
+    });
 
-    function Slider(countImg) {
+    function Slider(sliderWidth, countImg) {
         var imageWidth = sliderWidth / countImg;
         allImages.width(imageWidth);
 
@@ -25,7 +29,7 @@ $(document).ready(function () {
         });
     }
 
-    Slider(3);
+    Slider(sliderWidth, 3);
     var postItem = $('.content__item');
     var postImg = postItem.find('.post__img_wrap');
 
