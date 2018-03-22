@@ -329,12 +329,46 @@ a
       padding: 6px
   &__social
     display: flex
+.pagination
+  display: flex
+  justify-content: center
+  padding: 40px 20px
+  &__item
+    margin: 3px
+    font-weight: bold
+    background: #fff
+    padding: 10px 14px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04)
+    border-radius: 3px
+    border-bottom: 2px solid $font_active
 .footer
   background-color: #fff
   padding-top: 20px
   box-shadow: 1px -2px 3px 0px rgba(0, 0, 0, 0.05)
-  border-top: 4px solid $font_active
   color: #aaa
+  &__bottom
+    margin-top: 40px
+    padding: 15px 0 12px
+    background-color: #555
+    font-size: 12px
+    font-family: "Montserrat", sans-serif
+    text-transform: uppercase
+  &__title
+    text-align: center
+    color: #707070
+    margin-bottom: 13px
+    text-transform: uppercase
+    border-bottom: 3px solid $font_active
+    padding-bottom: 5px
+  &__section
+    display: flex
+    margin: 0 auto
+    max-width: 1170px
+    min-width: 300px
+  &__item
+    @include col-sm(12)
+    @include col-md(4)
+    @include col-lg(4)
 
 .black
   background: black
