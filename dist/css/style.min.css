@@ -114,7 +114,8 @@ a {
 .slider {
   position: relative;
   -webkit-transition: all .5s ease;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  overflow: hidden; }
   .slider__box_content {
     margin: 0;
     padding: 0;
@@ -144,9 +145,6 @@ a {
     padding: 10px;
     color: #fff;
     background: rgba(0, 0, 0, 0.5); }
-  .slider__right {
-    margin: 30px auto;
-    max-width: 1070px; }
 
 /*-------------------------------------------
 			  Content
