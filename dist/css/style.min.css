@@ -122,12 +122,13 @@ a {
     overflow: hidden;
     width: 1000%; }
   .slider__item {
-    background: goldenrod;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     display: block;
-    height: 250px; }
+    height: 320px; }
+  .slider__img {
+    width: 100%; }
   .slider__nav {
     position: absolute;
     display: -webkit-box;
