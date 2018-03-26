@@ -116,6 +116,36 @@ a {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   overflow: hidden; }
+  .slider__wrapper {
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    z-index: 9; }
+  .slider__category {
+    position: absolute;
+    top: 40%;
+    left: 100px;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px; }
+  .slider__title {
+    top: 50%;
+    left: 100px;
+    position: absolute;
+    color: #fff; }
+  .slider__date {
+    top: 50%;
+    left: 100px;
+    position: absolute;
+    color: #fff; }
   .slider__box_content {
     margin: 0;
     padding: 0;

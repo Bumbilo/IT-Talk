@@ -103,6 +103,36 @@ a
   position: relative
   transition: all .5s ease
   overflow: hidden
+  &__wrapper
+    position: absolute
+    top: 50%
+    padding: 20px
+    left: 0
+    opacity: 1
+    width: 100%
+    z-index: 9
+  &__category
+    position: absolute
+    top: 40%
+    left: 100px
+    display: block
+    font-family: $default_font
+    font-size: 10px
+    text-transform: uppercase
+    margin-bottom: 15px
+    color: #fff
+    border: 1px solid #fff
+    padding: 5px
+  &__title
+    top: 50%
+    left: 100px
+    position: absolute
+    color: #fff
+  &__date
+    top: 50%
+    left: 100px
+    position: absolute
+    color: #fff
   &__box_content
     margin: 0
     padding: 0

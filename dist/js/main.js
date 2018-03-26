@@ -5,14 +5,10 @@ $(document).ready(function () {
     var startMargin = 0;
     $(window).resize(function () {
         sliderWidth = slider.width();
-        console.log('sliderWidth', sliderWidth);
         Slider(sliderWidth, 4);
-
          if (sliderWidth < 576) {
-            console.log('less then 578')
             Slider(sliderWidth, 1);
         } else if (sliderWidth < 768) {
-            console.log('less then 768')
             Slider(sliderWidth, 2);
         } else if(sliderWidth < 992){
             Slider(sliderWidth, 3);
