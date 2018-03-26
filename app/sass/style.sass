@@ -104,7 +104,7 @@ a
   transition: all .5s ease
   overflow: hidden
   &__wrapper
-    position: absolute
+    position: relative
     top: 50%
     padding: 20px
     left: 0
@@ -154,6 +154,7 @@ a
   &__left
     padding: 10px
     color: #fff
+    cursor: pointer
     background: rgba(0, 0, 0, .5)
   &__right
     @extend .slider__left
@@ -398,18 +399,3 @@ a
     @include col-sm(12)
     @include col-md(4)
     @include col-lg(4)
-
-.black
-  background: black
-
-.red
-  background: red
-
-.green
-  background: green
-
-.blue
-  background: blue
-
-.grey
-  background: grey
