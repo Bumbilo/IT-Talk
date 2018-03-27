@@ -1,4 +1,5 @@
-@import "_grid.sass"
+@import '_grid.sass'
+@import '_reset.sass'
 
 /*-------------------------------------------
         Default colors
@@ -120,19 +121,19 @@ a
     font-size: 10px
     text-transform: uppercase
     margin-bottom: 15px
-    color: #fff
-    border: 1px solid #fff
+    color: white
+    border: 1px solid white
     padding: 5px
   &__title
     top: 50%
     left: 100px
     position: absolute
-    color: #fff
+    color: white
   &__date
     top: 50%
     left: 100px
     position: absolute
-    color: #fff
+    color: white
   &__box_content
     margin: 0
     padding: 0
@@ -153,9 +154,9 @@ a
     top: calc(50% - 18px)
   &__left
     padding: 10px
-    color: #fff
+    color: white
     cursor: pointer
-    background: rgba(0, 0, 0, .5)
+    background: rgba(0, 0, 0, 0.5)
   &__right
     @extend .slider__left
 /*-------------------------------------------
@@ -178,7 +179,7 @@ a
     @include col-md(4)
     @include col-lg(4)
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.125)
-    background: #fff
+    background: white
     overflow: hidden
     border-radius: 3px
     margin: 15px !important
@@ -192,7 +193,7 @@ a
     &_mask
       width: 600px
       height: 306px
-      background: rgba(255, 255, 255, .1)
+      background: rgba(255, 255, 255, 0.1)
       display: inline-block
       position: absolute
       right: 350px
@@ -209,7 +210,7 @@ a
     text-transform: uppercase
     transition: all 0.3s ease
     background: $font_active
-    color: #fff
+    color: white
     padding: 5px
   &__meta
     position: absolute
@@ -218,20 +219,20 @@ a
     z-index: 50
     transition: all 0.3s ease
   &__date
-    background-color: rgba(0, 0, 0, .08)
-    border: 1px solid rgba(0, 0, 0, .08)
+    background-color: rgba(0, 0, 0, 0.08)
+    border: 1px solid rgba(0, 0, 0, 0.08)
     font-family: $default_font
     font-weight: 400
     font-size: 18px
     padding: 7px
     margin-bottom: 10px
     &_year
-      color: #fff
-      border-bottom: 2px solid #fff
+      color: white
+      border-bottom: 2px solid white
       padding: 2px 0 6px 0
       text-align: center
     &_month
-      color: #fff
+      color: white
       font-size: 11px
       text-transform: uppercase
       padding: 8px 0 5px 0
@@ -251,7 +252,7 @@ a
     padding-top: 10px
     margin-bottom: 10px
     margin-top: - 55px
-    background: rgba(255, 255, 255, .4)
+    background: rgba(255, 255, 255, 0.4)
   &__title
     color: $default_black
     font-size: 14px
@@ -355,7 +356,7 @@ a
     &_red
       border: none
       background: $font_active
-      color: #fff
+      color: white
       padding: 6px
   &__social
     display: flex
@@ -366,13 +367,13 @@ a
   &__item
     margin: 3px
     font-weight: bold
-    background: #fff
+    background: white
     padding: 10px 14px
     box-shadow: 0 1px 3px rgba(0,0,0,0.04)
     border-radius: 3px
     border-bottom: 2px solid $font_active
 .footer
-  background-color: #fff
+  background-color: white
   padding-top: 20px
   box-shadow: 1px -2px 3px 0px rgba(0, 0, 0, 0.05)
   color: #aaa
@@ -381,7 +382,7 @@ a
     padding: 15px 0 12px
     background-color: #555
     font-size: 12px
-    font-family: "Montserrat", sans-serif
+    font-family: $default_font
     text-transform: uppercase
   &__title
     text-align: center
