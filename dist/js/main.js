@@ -1,43 +1,4 @@
 $(document).ready(function () {
-    var slider = $('.slider');
-    var allImages = slider.find('.slider__item');
-    var sliderWidth = slider.width();
-    var startMargin = 0;
-
-    function Slider(sliderWidth, countImg) {
-        var imageWidth = sliderWidth / countImg;
-        allImages.width(imageWidth);
-
-        slider.find('.slider__left').click(function () {
-            startMargin += -(sliderWidth / countImg);
-            if (startMargin < imageWidth * -(allImages.length - countImg)) {
-                startMargin = -imageWidth * (allImages.length - countImg);
-            }
-            slider.find('.slider__box_content').css('margin-left', startMargin + 'px');
-        });
-
-        slider.find('.slider__right').click(function () {
-            startMargin += (sliderWidth / countImg);
-            if (startMargin > 0) {
-                startMargin = 0;
-            }
-            slider.find('.slider__box_content').css('margin-left', startMargin + 'px');
-        });
-    }
-
-    $(window).resize(function () {
-        sliderWidth = slider.width();
-        Slider(sliderWidth, 4);
-         if (sliderWidth < 576) {
-            Slider(sliderWidth, 1);
-        } else if (sliderWidth < 768) {
-            Slider(sliderWidth, 2);
-        } else if(sliderWidth < 992){
-            Slider(sliderWidth, 3);
-        } 
-    });
-
-    Slider(sliderWidth, 3);
     var postItem = $('.content__item');
     var postImg = postItem.find('.post__img_wrap');
 
@@ -54,4 +15,46 @@ $(document).ready(function () {
         $(this).find('.post__img_mask').css('right', '300px');
     });
 
+    $('.slider').slick({
+        infinite: true,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 2400,
+                settings: {
+                    slidesToShow: 5,
+                    infinite: true
+                }
+            }, {
+                breakpoint: 1366,
+                settings: {
+                    slidesToShow: 4,
+                    infinite: true
+                }
+            }, {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true
+                }
+
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: true
+                }
+            }]
+    })
 });

@@ -21,7 +21,7 @@ gulp.task('connect', function () {
 gulp.task('css', function () {
     gulp.src('app/sass/*.sass')
         .pipe(sass().on('error', sass.logError))
-        // .pipe(minifyCSS(''))
+        .pipe(minifyCSS(''))
         .pipe(autoprefixer({
             browsers: ['last 25 versions'],
             cascade: false
