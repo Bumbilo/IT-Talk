@@ -116,8 +116,44 @@ a
  ------------------------------------------*/
 .slider
   position: relative
-  transition: all .5s ease
+  transition: all 1s ease
   overflow: hidden
+  max-height: 350px
+  &__img
+    width: 100%
+  &__wrapper
+    position: relative
+    widows: 100%
+  &__info
+    position: absolute
+    top: 40%
+    left: 0
+    padding: 10px 30px
+    width: 100%
+    transform: translateY(-30%)
+    font-family: $default_font
+    color: #fff
+  &__category
+    display: inline-block
+    color: inherit
+    padding: 5px
+    border: 1px solid #fff
+    font-size: 10px
+    text-transform: uppercase
+    margin-bottom: 15px
+    cursor: pointer
+    &:hover
+      border-color: $font_active
+  &__title
+    display: block
+    color: inherit
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: bold
+    cursor: pointer
+    margin-bottom: 10px
+  &__date
+    font-size: 10px
   &__item
     box-sizing: border-box
     float: left
@@ -128,6 +164,7 @@ a
  ------------------------------------------*/
 .content
   background: #f6f6f6
+  padding-top: 15px
   &__section
     display: flex
     flex-flow: row wrap
@@ -147,7 +184,6 @@ a
     overflow: hidden
     border-radius: 3px
     margin: 15px !important
-
 .post
   &__img
     width: 100%
@@ -230,7 +266,8 @@ a
     letter-spacing: 0.02em
     padding: 0 25px
   &__social
-    padding: 5px 5px 0
+    padding: 5px 20px 0
+    z-index: 20
     &_item
       margin: 0 5px
       color: #a0a0a0
@@ -328,6 +365,7 @@ a
   display: flex
   justify-content: center
   padding: 40px 20px
+  heigth: 20px
   &__item
     margin: 3px
     font-weight: bold
@@ -336,6 +374,11 @@ a
     box-shadow: 0 1px 3px rgba(0,0,0,0.04)
     border-radius: 3px
     border-bottom: 2px solid $font_active
+    cursor: pointer
+    transition: all .1s ease-in
+    &:hover
+      background: #F7F8F9
+      border-width: 1px
 .footer
   background-color: white
   padding-top: 20px
